@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;1,200;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="script.js"></script>
+    <title>bordom</title>
+  </head>
+  <body>
+    <div class="container" onload="setupEverything()">
+      <ul class="activity-type">
+        <li>
+          <a href="#" onclick="changeActivityType('education')">education</a>
+        </li>
+        <li>
+          <a href="#" onclick="changeActivityType('recreational')"
+            >recreational</a
+          >
+        </li>
+        <li><a href="#" onclick="changeActivityType('social')">social</a></li>
+        <li><a href="#" onclick="changeActivityType('diy')">diy</a></li>
+        <li><a href="#" onclick="changeActivityType('charity')">charity</a></li>
+        <li><a href="#" onclick="changeActivityType('cooking')">cooking</a></li>
+        <li>
+          <a href="#" onclick="changeActivityType('relaxation')">relaxation</a>
+        </li>
+        <li><a href="#" onclick="changeActivityType('music')">music</a></li>
+        <li>
+          <a href="#" onclick="changeActivityType('busywork')">busywork</a>
+        </li>
+      </ul>
+      <p class="sub_title">Activity Type</p>
+      <p class="type_text" id="activityTypeText">Activity Type</p>
+
+      <p class="sub_title">participants</p>
+      <p class="people_text" id="peopleText"></p>
+      <div class="btn-container">
+        <button class="people_btn" onclick="addPeople(-1)">Less</button>
+        <button class="people_btn" onclick="addPeople(1)">More</button>
+        <hr />
+      </div>
+      <div class="actWrapper">
+        <p class="subTitle">activity</p>
+        <p class="activity" id="actText"></p>
+        <a href="" target="_blank">
+          <h3 class="activity-link" id="actLinkText"></h3>
+        </a>
+      </div>
+
+      <button class="go-btn" onclick="getNewActivity()">Go</button>
+    </div>
+  </body>
+</html>
